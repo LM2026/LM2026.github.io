@@ -4,6 +4,18 @@ body {
   text-align: center;
 }
 
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+
 #inputTextbox {
   width: 1000px; /* Wider width */
   height: 50px; /* Taller height */
