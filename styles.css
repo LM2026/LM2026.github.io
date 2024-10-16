@@ -9,7 +9,5 @@ body {
   height: 50px; /* Taller height */
   background-color: #2a2e2e;
   color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0; /* Adjust left as needed to position horizontally */
-}
+  position: relative;
+  bottom: 10px;
