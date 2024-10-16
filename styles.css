@@ -5,16 +5,17 @@ body {
 }
 
 h1 {
-  text-align: center;
   text-transform: uppercase;
   color: white;
 }
 
 p {
   text-indent: 20px;
-  text-align: justify;
   letter-spacing: 3px;
+  color: white;
 }
+
+<input style="position: absolute; top: 100px;">
 
 #inputTextbox {
   width: 1000px; /* Wider width */
