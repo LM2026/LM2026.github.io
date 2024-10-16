@@ -14,15 +14,13 @@ p {
   color: white;
 }
 
-<input style="position: absolute; top: 100px;">
-
 #inputTextbox {
   width: 1000px; /* Wider width */
   height: 50px; /* Taller height */
   background-color: #2a2e2e;
   color: white;
-  position: relative;
-  bottom: 10px;
+  position: absolute; 
+  top: 100px;
   outline: 0;
   border-width: 0 0 2px;
   border-color: #191c1c;
