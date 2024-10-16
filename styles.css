@@ -3,3 +3,11 @@ body {
   background: #2a2e2e;
   text-align: center;
 }
+
+#widerTextarea {
+  width: 300px; /* Wider width */
+}
+
+#tallerTextarea {
+  height: 200px; /* Taller height */
+}
