@@ -7,11 +7,11 @@ body {
 h1 {
   text-align: center;
   text-transform: uppercase;
-  color: #4CAF50;
+  color: white;
 }
 
 p {
-  text-indent: 50px;
+  text-indent: 20px;
   text-align: justify;
   letter-spacing: 3px;
 }
