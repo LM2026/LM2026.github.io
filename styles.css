@@ -6,8 +6,7 @@ body {
 
 #inputTextbox {
   width: 1000px; /* Wider width */
-}
-
-#inputTextbox {
   height: 50px; /* Taller height */
+  background-color: #3CBC8D;
+  color: white;
 }
