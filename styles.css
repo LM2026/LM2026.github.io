@@ -4,10 +4,10 @@ body {
   text-align: center;
 }
 
-#widerTextarea {
-  width: 300px; /* Wider width */
+#inputTextbox {
+  width: 600px; /* Wider width */
 }
 
-#tallerTextarea {
+#inputTextbox {
   height: 200px; /* Taller height */
 }
