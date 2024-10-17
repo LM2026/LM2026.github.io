@@ -9,15 +9,15 @@ h1 {
   color: white;
   position: relative; 
   top: 15px;
-  font-size:40px;
+  font-size:35px;
 }
 
 p {
   letter-spacing: 2px;
   color: white;
   position: relative; 
-  top: 20px;
-  font-size:30px;
+  top: 10px;
+  font-size:25px;
 }
 
 #inputTextbox {
