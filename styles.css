@@ -39,10 +39,10 @@ p {
 }
 
 #answer {
-    color: white;  /* Color for the answer text */
+    color: white;
 }
 
 #error {
-    color: red;    /* Color for the error text */
-    font-weight: bold; /* Make error message bold */
+    color: red;
+    font-weight: bold;
 }
