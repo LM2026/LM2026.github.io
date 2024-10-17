@@ -12,35 +12,37 @@
 
   <input type="text" id="inputTextbox" name="inputTextbox" placeholder="Message Alexis Ingram">
 
-  <div id="answer"></div>
+  <div id="answer" class="response"></div>
+  <div id="error" class="response error"></div>
 
   <script>
     const askQuestion = async () => {
         const inputBox = document.querySelector('#inputTextbox');
-        const question = inputBox.value;  // Get the question in the input box
+        const question = inputBox.value;
 
         if (question.trim() === "") return;
 
         try {
-        // Send the question to the backend API
-        const response = await fetch('/ask', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ question })
-        });
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question })
+            });
 
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            document.querySelector('#answer').innerText = data.answer;
+            document.querySelector('#error').innerText = ""; // Clear error message
+        } catch (error) {
+            console.error('Error:', error);
+            document.querySelector('#error').innerText = "Sorry, something went wrong!";
+            document.querySelector('#answer').innerText = ""; // Clear answer message
+        } finally {
+            inputBox.value = ""; // Clear input
         }
-
-        const data = await response.json();  // Answer from backend
-        document.querySelector('#answer').innerText = data.answer;
-    } catch (error) {
-        console.error('Error:', error);
-        document.querySelector('#answer').innerText = "Sorry, something went wrong!";
-    } finally {
-        inputBox.value = ""; // Clears input
-    }
     };
 
     document.querySelector('#inputTextbox').addEventListener('keydown', (event) => {
