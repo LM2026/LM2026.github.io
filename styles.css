@@ -9,6 +9,7 @@ h1 {
   color: white;
   position: relative; 
   top: 25px;
+  font-size:48px;
 }
 
 p {
@@ -16,6 +17,7 @@ p {
   color: white;
   position: relative; 
   top: 50px;
+  font-size:48px;
 }
 
 #inputTextbox {
