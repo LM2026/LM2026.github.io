@@ -15,13 +15,13 @@
   <div id="answer"></div>
 
   <script>
-    // Function to send the question to the backend
     const askQuestion = async () => {
         const inputBox = document.querySelector('#inputTextbox');
-        const question = inputBox.value;  // Get the question from the input box
+        const question = inputBox.value;  // Get the question in the input box
 
         if (question.trim() === "") return;
 
+        try {
         // Send the question to the backend API
         const response = await fetch('/ask', {
             method: 'POST',
@@ -29,10 +29,18 @@
             body: JSON.stringify({ question })
         });
 
-        const data = await response.json();  // Get the answer from the backend
-        document.querySelector('#answer').innerText = data.answer;
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
 
-        inputBox.value = ""; // Clear input
+        const data = await response.json();  // Answer from backend
+        document.querySelector('#answer').innerText = data.answer;
+    } catch (error) {
+        console.error('Error:', error);
+        document.querySelector('#answer').innerText = "Sorry, something went wrong!";
+    } finally {
+        inputBox.value = ""; // Clears input
+    }
     };
 
     document.querySelector('#inputTextbox').addEventListener('keydown', (event) => {
