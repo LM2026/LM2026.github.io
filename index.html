@@ -35,11 +35,11 @@
 
             const data = await response.json();
             document.querySelector('#answer').innerText = data.answer;
-            document.querySelector('#error').innerText = ""; // Clear error message
+            document.querySelector('#error').innerText = "";
         } catch (error) {
             console.error('Error:', error);
-            document.querySelector('#error').innerText = "Sorry, something went wrong!";
-            document.querySelector('#answer').innerText = ""; // Clear answer message
+            document.querySelector('#error').innerText = "Something went wrong.";
+            document.querySelector('#answer').innerText = "";
         } finally {
             inputBox.value = ""; // Clear input
         }
