@@ -8,14 +8,14 @@ h1 {
   letter-spacing: 2px;
   color: white;
   position: relative; 
-  top: 100px;
+  top: 25px;
 }
 
 p {
   letter-spacing: 2px;
   color: white;
   position: relative; 
-  top: 150px;
+  top: 50px;
 }
 
 #inputTextbox {
