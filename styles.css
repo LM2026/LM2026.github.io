@@ -30,3 +30,17 @@ p {
   border-width: thick;
   border-color: #242929;
   font-size:24px;
+
+.response {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#answer {
+    color: white;  /* Color for the answer text */
+}
+
+#error {
+    color: red;    /* Color for the error text */
+    font-weight: bold; /* Make error message bold */
+}
