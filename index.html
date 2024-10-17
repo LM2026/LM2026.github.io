@@ -17,7 +17,8 @@
   <script>
     // Function to send the question to the backend
     const askQuestion = async () => {
-        const question = document.querySelector('#inputTextbox').value;  // Get the question from the input box
+        const inputBox = document.querySelector('#inputTextbox');
+        const question = inputBox.value;  // Get the question from the input box
 
         if (question.trim() === "") return;
 
@@ -30,6 +31,8 @@
 
         const data = await response.json();  // Get the answer from the backend
         document.querySelector('#answer').innerText = data.answer;
+
+        inputBox.value = ""; // Clear input
     };
 
     document.querySelector('#inputTextbox').addEventListener('keydown', (event) => {
